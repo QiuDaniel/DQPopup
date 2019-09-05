@@ -27,10 +27,10 @@ There are two ways to use `DQPopup` in your project:
 - `Manually` install
 
 ### CocoaPods
-The easiest way of installing DQSegmentedControl is via [CocoaPods](http://cocoapods.org/). 
+The easiest way of installing DQPopup is via [CocoaPods](http://cocoapods.org/). 
 
 ```
-pod 'DQSegmentedControl'
+pod 'DQPopup'
 ```
 
 ### Manually
@@ -65,4 +65,4 @@ Animation transition for presenting contentView. Controlled how the popup will b
 
 # License
 
-DDQPopup is licensed under the terms of the MIT License. Please see the [LICENSE](LICENSE.md) file for full details.
+DQPopup is licensed under the terms of the MIT License. Please see the [LICENSE](LICENSE.md) file for full details.
