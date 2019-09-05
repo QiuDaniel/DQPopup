@@ -23,7 +23,7 @@ public class DQPopupAnimationSlide: NSObject, DQPopupAnimationType {
     
     private let style: DQPopupAnimationSlideStyle
     
-    init(style: DQPopupAnimationSlideStyle = .bottombottom) {
+    public init(style: DQPopupAnimationSlideStyle = .bottombottom) {
         self.style = style
     }
     
