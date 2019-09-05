@@ -70,7 +70,7 @@
 		65F78F822320A69D00EAA9E9 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				65F78F952320A71D00EAA9E9 /* DQPopupView */,
+				65F78F952320A71D00EAA9E9 /* DQPopup */,
 				65F78F832320A69D00EAA9E9 /* AppDelegate.swift */,
 				65F78F852320A69D00EAA9E9 /* ViewController.swift */,
 				65F78FA42320AA7D00EAA9E9 /* CustomView.swift */,
@@ -82,7 +82,7 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		65F78F952320A71D00EAA9E9 /* DQPopupView */ = {
+		65F78F952320A71D00EAA9E9 /* DQPopup */ = {
 			isa = PBXGroup;
 			children = (
 				65F78F972320A71D00EAA9E9 /* DQPopup.swift */,
@@ -93,8 +93,8 @@
 				65F78F992320A71D00EAA9E9 /* DQPopupAnimationDrop.swift */,
 				65F78F9C2320A71D00EAA9E9 /* DQPopupAnimationSpring.swift */,
 			);
-			name = DQPopupView;
-			path = ../../DQPopupView;
+			name = DQPopup;
+			path = ../../DQPopup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

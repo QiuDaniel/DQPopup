@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DQPopupAnimationFade:NSObject, DQPopupAnimationType {
+public class DQPopupAnimationFade:NSObject, DQPopupAnimationType {
     
-    func show(_ popupView: UIView, overlayView: UIView) {
+    public func show(_ popupView: UIView, overlayView: UIView) {
         popupView.center = overlayView.center
         popupView.alpha = 0.0
         UIView.animate(withDuration: 0.5) {
@@ -18,7 +18,7 @@ class DQPopupAnimationFade:NSObject, DQPopupAnimationType {
         }
     }
     
-    func dismss(_ popupView: UIView, overlayView: UIView, completion: @escaping CompletionHandler) {
+    public func dismss(_ popupView: UIView, overlayView: UIView, completion: @escaping CompletionHandler) {
         UIView.animate(withDuration: 0.25, animations: {
             overlayView.alpha = 0.0
             popupView.alpha = 0.0

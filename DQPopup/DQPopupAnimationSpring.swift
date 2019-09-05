@@ -8,11 +8,11 @@
 
 import UIKit
 
-class DQPopupAnimationSpring:NSObject, DQPopupAnimationType, CAAnimationDelegate {
+public class DQPopupAnimationSpring:NSObject, DQPopupAnimationType, CAAnimationDelegate {
     
     private var completion: CompletionHandler?
     
-    func show(_ popupView: UIView, overlayView: UIView) {
+    public func show(_ popupView: UIView, overlayView: UIView) {
         popupView.alpha = 1.0
         
         let popAnimation = CAKeyframeAnimation(keyPath: "transform")
@@ -30,7 +30,7 @@ class DQPopupAnimationSpring:NSObject, DQPopupAnimationType, CAAnimationDelegate
         popupView.layer.add(popAnimation, forKey: nil)
     }
     
-    func dismss(_ popupView: UIView, overlayView: UIView, completion: @escaping () -> Void) {
+    public func dismss(_ popupView: UIView, overlayView: UIView, completion: @escaping () -> Void) {
         
         self.completion = completion
         
@@ -54,7 +54,7 @@ class DQPopupAnimationSpring:NSObject, DQPopupAnimationType, CAAnimationDelegate
         }
     }
     
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         guard let completion = self.completion else {
             return
         }
@@ -62,3 +62,4 @@ class DQPopupAnimationSpring:NSObject, DQPopupAnimationType, CAAnimationDelegate
         self.completion = nil
     }
 }
+

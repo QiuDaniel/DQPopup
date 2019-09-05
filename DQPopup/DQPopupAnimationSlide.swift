@@ -19,7 +19,7 @@ public enum DQPopupAnimationSlideStyle {
     case rightright
 }
 
-class DQPopupAnimationSlide: NSObject, DQPopupAnimationType {
+public class DQPopupAnimationSlide: NSObject, DQPopupAnimationType {
     
     private let style: DQPopupAnimationSlideStyle
     
@@ -27,7 +27,7 @@ class DQPopupAnimationSlide: NSObject, DQPopupAnimationType {
         self.style = style
     }
     
-    func show(_ popupView: UIView, overlayView: UIView) {
+    public func show(_ popupView: UIView, overlayView: UIView) {
         let sourceSize = overlayView.bounds.size
         let popupSize = popupView.bounds.size
         var popupStartRect: CGRect!
@@ -53,7 +53,7 @@ class DQPopupAnimationSlide: NSObject, DQPopupAnimationType {
         }, completion: nil)
     }
     
-    func dismss(_ popupView: UIView, overlayView: UIView, completion: @escaping CompletionHandler) {
+    public func dismss(_ popupView: UIView, overlayView: UIView, completion: @escaping CompletionHandler) {
         let sourceSize = overlayView.bounds.size
         let popupSize = popupView.bounds.size
         var popupEndRect: CGRect!

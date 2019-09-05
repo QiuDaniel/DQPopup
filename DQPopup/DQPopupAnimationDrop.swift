@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DQPopupAnimationDrop: NSObject, DQPopupAnimationType {
+public class DQPopupAnimationDrop: NSObject, DQPopupAnimationType {
     
-    func show(_ popupView: UIView, overlayView: UIView) {
+    public func show(_ popupView: UIView, overlayView: UIView) {
         popupView.center = CGPoint(x: overlayView.center.x, y: -popupView.bounds.size.height / 2)
         popupView.transform = CGAffineTransform(rotationAngle: CGFloat(-M_1_PI / 1.5))
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
@@ -19,7 +19,7 @@ class DQPopupAnimationDrop: NSObject, DQPopupAnimationType {
         }, completion: nil)
     }
     
-    func dismss(_ popupView: UIView, overlayView: UIView, completion: @escaping CompletionHandler) {
+    public func dismss(_ popupView: UIView, overlayView: UIView, completion: @escaping CompletionHandler) {
         UIView.animate(withDuration: 0.35, delay: 0.0, options: .curveEaseOut, animations: {
             popupView.center = CGPoint(x: overlayView.center.x, y: overlayView.bounds.size.height + popupView.bounds.size.height)
             popupView.transform = CGAffineTransform(rotationAngle: CGFloat(M_1_PI / 1.5))
