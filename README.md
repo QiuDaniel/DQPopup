@@ -49,7 +49,7 @@ let view = CustomView(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
 dq.present(view, animation: DQPopupAnimationFade())
 ```
 
-Included is a demo project showing how to fully use it.
+Example is a demo project showing how to fully use it.
 
 
 # Customization
