@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UC-tq-VK7">
+                                <rect key="frame" x="167" y="194" width="80" height="34"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Y0t-dH-zsc"/>
+                                    <constraint firstAttribute="height" constant="34" id="tMi-aL-Lof"/>
+                                </constraints>
+                                <state key="normal" title="Fade">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fadeBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYB-aH-78f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V08-bs-LrE" userLabel="Spring">
+                                <rect key="frame" x="167" y="248" width="80" height="34"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="6kH-bu-bjV"/>
+                                    <constraint firstAttribute="width" constant="80" id="bt0-V8-Vyh"/>
+                                </constraints>
+                                <state key="normal" title="Spring">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="springBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="40u-Op-x7J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndp-jI-p8F">
+                                <rect key="frame" x="167" y="302" width="80" height="34"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="HZD-gZ-lPr"/>
+                                    <constraint firstAttribute="height" constant="34" id="MFr-9C-P0c"/>
+                                </constraints>
+                                <state key="normal" title="Drop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dropBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KWe-au-MiQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-OB-c9V">
+                                <rect key="frame" x="167" y="356" width="80" height="34"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.20784313730000001" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="NmP-va-gao"/>
+                                    <constraint firstAttribute="height" constant="34" id="Ufe-Yw-ovy"/>
+                                </constraints>
+                                <state key="normal" title="Slide">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="slideBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ofp-ag-ktv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3UC-tq-VK7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2xj-4X-GJi"/>
+                            <constraint firstItem="2NK-OB-c9V" firstAttribute="top" secondItem="Ndp-jI-p8F" secondAttribute="bottom" constant="20" id="MN8-3p-QXU"/>
+                            <constraint firstItem="Ndp-jI-p8F" firstAttribute="centerX" secondItem="V08-bs-LrE" secondAttribute="centerX" id="X5s-7G-mQI"/>
+                            <constraint firstItem="2NK-OB-c9V" firstAttribute="centerX" secondItem="Ndp-jI-p8F" secondAttribute="centerX" id="jVP-c4-Ynd"/>
+                            <constraint firstItem="V08-bs-LrE" firstAttribute="centerX" secondItem="3UC-tq-VK7" secondAttribute="centerX" id="mYA-HI-DDS"/>
+                            <constraint firstItem="V08-bs-LrE" firstAttribute="top" secondItem="3UC-tq-VK7" secondAttribute="bottom" constant="20" id="wC8-gH-zoX"/>
+                            <constraint firstItem="3UC-tq-VK7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="yCf-4x-MPK"/>
+                            <constraint firstItem="Ndp-jI-p8F" firstAttribute="top" secondItem="V08-bs-LrE" secondAttribute="bottom" constant="20" id="zMa-yT-f8T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
