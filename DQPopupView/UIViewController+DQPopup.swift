@@ -67,9 +67,6 @@ extension DQPopup where Base: UIViewController {
     }
 }
 
-private let kDQPopupViewTag = 10010
-private let kDQOverlayViewTag = 10086
-
 extension DQPopup where Base: UIViewController {
     
     public var dqPopupView: UIView? {
@@ -127,12 +124,10 @@ extension DQPopup where Base: UIViewController {
         
         let sourceView = _topView()
         _dqPopupView!.autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin, .flexibleBottomMargin, .flexibleRightMargin]
-        _dqPopupView!.tag = kDQPopupViewTag
         
         if _dqOverlayView == nil {
             let view = UIView(frame: sourceView.bounds)
             view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            view.tag = kDQOverlayViewTag
             view.backgroundColor = .clear
             
             let backgroundView = UIView(frame: sourceView.bounds)
@@ -140,14 +135,12 @@ extension DQPopup where Base: UIViewController {
             backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.8)
             view.addSubview(backgroundView)
             
-            if isEnableBackgroundTap {
-                if let gesture = backgroundView.gestureRecognizers, gesture.count > 0 {
-                    gesture.forEach { backgroundView.removeGestureRecognizer($0) }
-                }
-                
-                let tap = UITapGestureRecognizer(target: base, action: #selector(base.backTapAction))
-                backgroundView.addGestureRecognizer(tap)
+            if let gesture = backgroundView.gestureRecognizers, gesture.count > 0 {
+                gesture.forEach { backgroundView.removeGestureRecognizer($0) }
             }
+            
+            let tap = UITapGestureRecognizer(target: base, action: #selector(base.backTapAction))
+            backgroundView.addGestureRecognizer(tap)
             
             _dqOverlayView = view
         }
@@ -186,6 +179,8 @@ extension DQPopup where Base: UIViewController {
 
 extension UIViewController {
     @objc fileprivate func backTapAction() {
-        dq.dismiss()
+        if dq.isEnableBackgroundTap {
+            dq.dismiss()
+        }
     }
 }
