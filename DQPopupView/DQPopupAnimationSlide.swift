@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum DQPopupAnimationSlideStyle {
+public enum DQPopupAnimationSlideStyle {
     case bottomtop
     case bottombottom
     case toptop
@@ -22,7 +22,8 @@ enum DQPopupAnimationSlideStyle {
 class DQPopupAnimationSlide: NSObject, DQPopupAnimationType {
     
     private let style: DQPopupAnimationSlideStyle
-    init(style: DQPopupAnimationSlideStyle) {
+    
+    init(style: DQPopupAnimationSlideStyle = .bottombottom) {
         self.style = style
     }
     
