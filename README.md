@@ -65,4 +65,4 @@ Animation transition for presenting contentView. Controlled how the popup will b
 
 # License
 
-DQPopup is licensed under the terms of the MIT License. Please see the [LICENSE](LICENSE.md) file for full details.
+DQPopup is licensed under the terms of the MIT License. Please see the [LICENSE](LICENSE) file for full details.
